@@ -1,4 +1,13 @@
 /* ===============================
+   Variabili e stili globali
+   =============================== */
+:root {
+  --bf-blue: #0a285d;
+  --fade-width: 60px;
+  --fade-opacity: 0.9;
+}
+
+/* ===============================
    Contenitore principale
    =============================== */
 .year-scroll-wrapper {
@@ -6,6 +15,15 @@
   overflow: hidden;
   margin: 20px auto;
   max-width: 800px;
+}
+
+/* ===============================
+   Titolo
+   =============================== */
+h2 {
+  font-weight: 600;
+  color: var(--bf-blue);
+  margin-left: 12px;
 }
 
 /* ===============================
@@ -18,9 +36,9 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  padding: 0.5rem 1rem;
   user-select: none;
   cursor: grab;
+  padding: 0.5rem calc(var(--fade-width) + 10px);
 }
 
 .year-selector.dragging {
@@ -32,9 +50,9 @@
    =============================== */
 .year-selector button {
   background: transparent;
-  border: 2px solid #0a285d;
+  border: 2px solid var(--bf-blue);
   border-radius: 50px;
-  color: #0a285d;
+  color: var(--bf-blue);
   padding: 10px 20px;
   font-weight: 600;
   flex-shrink: 0;
@@ -44,14 +62,14 @@
   cursor: pointer;
 }
 
-.year-selector button:hover {
-  background-color: #0a285d;
-  color: white;
+.year-selector button:hover,
+.year-selector button.active,
+.year-selector .btn-primary {
+  background-color: var(--bf-blue);
+  color: #fff;
 }
 
 .year-selector button.active {
-  background-color: #0a285d;
-  color: white;
   transform: scale(1.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -62,29 +80,39 @@
 .year-fade {
   position: absolute;
   top: 0;
-  width: 60px;
+  width: var(--fade-width);
   height: 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 5;
   transition: opacity 0.3s ease;
 }
 
 .year-fade.left {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), transparent);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, var(--fade-opacity)),
+    transparent
+  );
 }
 
 .year-fade.right {
   right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent);
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, var(--fade-opacity)),
+    transparent
+  );
 }
 
-/* Nasconde le ombre quando sei agli estremi */
-.year-scroll-wrapper.start .year-fade.left {
+/* Nasconde le ombre quando si è a inizio/fine scroll */
+.year-scroll-wrapper.start .year-fade.left,
+.overflow-hidden.start .year-fade.left {
   opacity: 0;
 }
 
-.year-scroll-wrapper.end .year-fade.right {
+.year-scroll-wrapper.end .year-fade.right,
+.overflow-hidden.end .year-fade.right {
   opacity: 0;
 }
 
@@ -103,8 +131,8 @@
 }
 
 .report-card button {
-  background-color: #0a285d;
-  color: white;
+  background-color: var(--bf-blue);
+  color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 50px;
@@ -117,39 +145,9 @@
   background-color: #0c3880;
 }
 
-.year-selector button.active {
-  background-color: #0a285d;
-  color: white;
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+/* ===============================
+   Fix opzionali
+   =============================== */
+.position-relative.overflow-hidden {
+  overflow: visible; /* previene tagli del contenuto */
 }
-
-.year-fade {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 60px;
-  pointer-events: none;
-  z-index: 5;
-  transition: opacity 0.3s ease;
-}
-
-.year-fade.left {
-  left: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0.95), transparent);
-}
-
-.year-fade.right {
-  right: 0;
-  background: linear-gradient(to left, rgba(255,255,255,0.95), transparent);
-}
-
-/* quando siamo a inizio/fine scroll, nascondi le ombre */
-.overflow-hidden.start .year-fade.left {
-  opacity: 0;
-}
-
-.overflow-hidden.end .year-fade.right {
-  opacity: 0;
-}
-
