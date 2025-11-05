@@ -1,0 +1,14 @@
+<div class="report-container">
+  <h2>Report di Sostenibilità del Gruppo BF</h2>
+  <p>Scarica i report annuali di sostenibilità in formato PDF.</p>
+
+  <ul>
+    <li *ngFor="let report of reports" class="report-item">
+      <h3>{{ report.titolo }} ({{ report.anno }})</h3>
+      <p>{{ report.descrizione }}</p>
+      <a [href]="report.fileUrl" target="_blank" rel="noopener noreferrer">
+        📄 Scarica il report
+      </a>
+    </li>
+  </ul>
+</div>

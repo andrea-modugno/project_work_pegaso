@@ -1,0 +1,19 @@
+<div class="year-scroll-wrapper">
+  <div class="year-fade left"></div>
+
+  <div class="year-selector">
+    <button *ngFor="let year of years"
+            [class.active]="year === selectedYear"
+            (click)="selectYear(year)">
+      {{ year }}
+    </button>
+  </div>
+
+  <div class="year-fade right"></div>
+</div>
+
+<div class="report-download">
+  <button class="download-btn">
+    Scarica il report {{ selectedYear }}
+  </button>
+</div>

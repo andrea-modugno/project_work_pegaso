@@ -1,0 +1,64 @@
+/* ======================
+   HEADER (Stile Gruppo BF)
+====================== */
+
+header {
+  background-color: var(--bf-blue); /* Blu istituzionale */
+  color: var(--bf-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 70px;
+}
+
+/* Logo BF */
+header img {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+/* Titolo o sezione testo */
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bf-white);
+  margin-left: 12px;
+}
+
+/* Se hai una nav */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+header nav a {
+  color: var(--bf-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+header nav a:hover {
+  color: var(--bf-blue-light);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
