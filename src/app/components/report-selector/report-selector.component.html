@@ -1,19 +1,26 @@
-<div class="year-scroll-wrapper">
-  <div class="year-fade left"></div>
+<div class="container text-center my-4">
+  <h2 class="mb-3 text-primary">Scarica il Report di Sostenibilità</h2>
 
-  <div class="year-selector">
-    <button *ngFor="let year of years"
-            [class.active]="year === selectedYear"
-            (click)="selectYear(year)">
-      {{ year }}
-    </button>
+  <div class="position-relative overflow-hidden">
+    <div class="year-fade left"></div>
+
+    <div #yearSelector class="d-flex flex-row overflow-auto py-2 px-1 justify-content-center year-selector">
+      <button *ngFor="let year of years"
+              class="btn mx-2 px-3 py-2"
+              [attr.data-year]="year"
+              [ngClass]="{'btn-primary': year === selectedYear, 'btn-outline-primary': year !== selectedYear}"
+              [class.active]="year === selectedYear"
+              (click)="selectYear(year)">
+        {{ year }}
+      </button>
+    </div>
+
+    <div class="year-fade right"></div>
   </div>
 
-  <div class="year-fade right"></div>
-</div>
-
-<div class="report-download">
-  <button class="download-btn">
-    Scarica il report {{ selectedYear }}
-  </button>
+  <div class="mt-4">
+    <a class="btn btn-dark px-4 py-2" [href]="getReportUrl()" target="_blank">
+      Scarica il report {{ selectedYear }}
+    </a>
+  </div>
 </div>
