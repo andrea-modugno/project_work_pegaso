@@ -23,7 +23,6 @@
 h2 {
   font-weight: 600;
   color: var(--bf-blue);
-  margin-left: 12px;
 }
 
 /* ===============================
@@ -38,7 +37,7 @@ h2 {
   scroll-behavior: smooth;
   user-select: none;
   cursor: grab;
-  padding: 0.5rem calc(var(--fade-width) + 10px);
+  padding: 1rem calc(var(--fade-width) + 10px);
 }
 
 .year-selector.dragging {
@@ -148,9 +147,6 @@ h2 {
 /* ===============================
    Fix opzionali
    =============================== */
-.position-relative.overflow-hidden {
-  overflow: visible; /* previene tagli del contenuto */
-}
 
 /* ... (tutto il tuo CSS esistente) ... */
 
@@ -170,4 +166,53 @@ h2 {
 .report-not-available p {
   margin: 0;
   font-weight: 500;
+}
+
+/* Ombre laterali morbide e dinamiche */
+.position-relative.overflow-hidden::before,
+.position-relative.overflow-hidden::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 70px; /* leggermente più ampia per sfumare meglio */
+  z-index: 4;
+  pointer-events: none;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ombra sinistra */
+.position-relative.overflow-hidden::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0.85) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Ombra destra */
+.position-relative.overflow-hidden::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0.85) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Quando siamo a inizio scroll */
+.position-relative.overflow-hidden.start::before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Quando siamo a fine scroll */
+.position-relative.overflow-hidden.end::after {
+  opacity: 0;
+  visibility: hidden;
 }
