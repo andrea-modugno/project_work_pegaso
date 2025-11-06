@@ -21,12 +21,20 @@
             "assets": [
               {
                 "glob": "**/*",
+                "input": "src/assets/images/",
+                "output": "/assets/images/"
+              },
+              {
+                "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -79,11 +87,20 @@
             "assets": [
               {
                 "glob": "**/*",
+                "input": "src/assets/images/",
+                "output": "/assets/images/"
+              },
+              {
+                "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
         }

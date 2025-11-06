@@ -1,0 +1,81 @@
+<!-- Contenitore della sezione (come prima) -->
+<section class="intro-container">
+
+  <!-- Header (come prima) -->
+  <div class="intro-header">
+    <h3>DAL GENOMA ALLO SCAFFALE</h3>
+    <h2>Sostenibilità</h2>
+    <p>
+      Il Gruppo BF propone un modello di sviluppo, scalabile e replicabile al servizio della filiera agro-industriale, orientato ai valori e ai principi di sostenibilità enunciati nel Codice etico, con un costante impegno nell’ambito della responsabilità sociale di impresa, che per le società del Gruppo significa orientamento permanente:
+    </p>
+  </div>
+
+  <!-- 
+    Questo è il nuovo carosello Bootstrap.
+    Ho aggiunto un ID unico "sustainabilityCarousel".
+  -->
+  <div id="sustainabilityCarousel"  data-bs-ride="carousel" class="carousel slide">
+    
+    <!-- 1. INDICATORI (i pallini sotto) -->
+    <div class="carousel-indicators">
+      <button 
+        type="button"
+        *ngFor="let card of introCards; let i = index"
+        data-bs-target="#sustainabilityCarousel" 
+        [attr.data-bs-slide-to]="i"
+        [class.active]="i === 0" 
+        [attr.aria-current]="i === 0 ? 'true' : 'false'"
+        [attr.aria-label]="'Slide ' + (i + 1)">
+      </button>
+    </div>
+
+    <!-- 2. SLIDES (il contenuto) -->
+    <div class="carousel-inner">
+      
+      <!-- 
+        Usiamo *ngFor per creare una "carousel-item" per ogni card.
+        [class.active]="i === 0" è FONDAMENTALE: 
+        dice a Bootstrap quale slide mostrare per prima.
+      -->
+      <div 
+        class="carousel-item" 
+        *ngFor="let card of introCards; let i = index"
+        [class.active]="i === 0">
+
+        <!-- 
+          Ora, dentro la slide, ricreiamo le nostre card 
+          usando gli stili 'card-with-bg' e 'card-simple' che avevamo già.
+        -->
+        <div *ngIf="card.type === 'image'" 
+             class="intro-card card-with-bg" 
+             [style.backgroundImage]="'url(' + card.imageUrl + ')'">
+          <h4>{{ card.title }}</h4>
+        </div>
+
+        <div *ngIf="card.type === 'text'" 
+             class="intro-card card-simple">
+          <h4>{{ card.title }}</h4>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. CONTROLLI (le frecce) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Footer (come prima) -->
+  <div class="intro-footer">
+    <p>
+Il Gruppo BF ha predisposto il suo primo Bilancio di Sostenibilità nell’esercizio 2018 avviando così, su base volontaria, un percorso di rendicontazione strutturata su identità, missione, valori e risultati raggiunti. Il Gruppo BF è convinto che, attraverso questo tipo di informativa, sia possibile rendicontare in modo puntuale e con rigore di metodo e far meglio conoscere i risultati e gli impatti sociali ed ambientali, oltre che economici, delle attività svolte dal Gruppo BF coerentemente con gli obiettivi individuati nel piano di sviluppo strategico.
+    </p>
+  </div>
+
+</section>
