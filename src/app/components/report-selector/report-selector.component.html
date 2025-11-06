@@ -5,8 +5,9 @@
     <div class="year-fade left"></div>
 
     <div #yearSelector
-         class="d-flex flex-row overflow-auto py-2 px-1 justify-content-center year-selector">
-      <button *ngFor="let year of years"
+         class="d-flex flex-row overflow-auto py-2 px-1 year-selector">
+      
+      <button *ngFor="let year of displayYears"
               class="btn mx-2 px-3 py-2"
               [attr.data-year]="year"
               [ngClass]="{'btn-primary': year === selectedYear, 'btn-outline-primary': year !== selectedYear}"
@@ -14,14 +15,25 @@
               (click)="selectYear(year)">
         {{ year }}
       </button>
+
     </div>
 
     <div class="year-fade right"></div>
   </div>
 
   <div class="mt-4">
-    <a class="btn btn-dark px-4 py-2" [href]="getReportUrl()" target="_blank">
-      Scarica il report {{ selectedYear }}
+    
+    <a *ngIf="selectedReport"
+       class="btn btn-dark px-4 py-2" 
+       [href]="selectedReport.fileUrl" 
+       target="_blank" 
+       rel="noopener noreferrer">
+      Scarica il report {{ selectedReport.anno }}
     </a>
+
+    <div *ngIf="!selectedReport" class="report-not-available">
+      <p>Il report per l'anno {{ selectedYear }} non è ancora disponibile.</p>
+    </div>
+
   </div>
 </div>

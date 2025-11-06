@@ -151,3 +151,23 @@ h2 {
 .position-relative.overflow-hidden {
   overflow: visible; /* previene tagli del contenuto */
 }
+
+/* ... (tutto il tuo CSS esistente) ... */
+
+/* Stile per il messaggio "non disponibile" */
+.report-not-available {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa; /* Un grigio chiaro */
+  border: 1px dashed #ced4da; /* Bordo tratteggiato */
+  border-radius: 8px;
+  color: #6c757d; /* Testo grigio scuro */
+  max-width: 600px; /* Come la tua .report-card */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.report-not-available p {
+  margin: 0;
+  font-weight: 500;
+}
