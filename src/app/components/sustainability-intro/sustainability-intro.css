@@ -1,5 +1,3 @@
-/* sustainability-intro.component.css */
-
 /* Colore blu istituzionale (lo stesso del tuo header) */
 :root {
   --bf-blue: #0a285d; 
@@ -61,13 +59,7 @@
   min-height: 280px;
   display: flex;
   align-items: flex-end; /* Allinea il testo in basso */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.intro-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
 }
 
 .intro-card h4 {
@@ -111,8 +103,6 @@
   align-items: center; /* Centra verticalmente il testo */
   text-align: center;
 }
-
-/* sustainability-intro.component.css */
 
 :root {
   --bf-blue: #0a285d; 
@@ -168,14 +158,7 @@
   min-height: 300px; /* Aumentato l'altezza minima */
   display: flex;
   align-items: flex-end; 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Ombra più pronunciata */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 0.5rem; /* Margine tra le card nel carosello */
-}
-
-.intro-card:hover {
-  transform: translateY(-8px); /* Effetto hover più evidente */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Ombra hover più forte */
 }
 
 .intro-card h4 {
@@ -262,4 +245,10 @@
 }
 .owl-theme .owl-nav button.owl-next {
   right: -20px;
+}
+
+#sustainabilityCarousel {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: transparent;
 }
