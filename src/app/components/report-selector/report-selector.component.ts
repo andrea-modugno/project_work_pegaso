@@ -1,9 +1,8 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnInit, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// Importa il tuo modello e il tuo servizio
 import { Report as ReportModel } from '../../models/report.model';
-import { Report } from '../../services/report.service'; // Questo è il tuo servizio
+import { Report } from '../../services/report.service';
 
 @Component({
   selector: 'app-report-selector',
@@ -93,7 +92,7 @@ export class ReportSelector implements AfterViewInit, OnInit {
     }
   }
 
-  // 🔥 Migliorata: controlla posizione e mostra/nasconde le ombre ai lati
+  // Controlla posizione e mostra/nasconde le ombre ai lati
   private updateFadeShadows() {
     const container = this.yearSelector.nativeElement;
     const parent = container.closest('.overflow-hidden');

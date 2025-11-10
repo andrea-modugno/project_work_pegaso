@@ -1,13 +1,12 @@
-/* Colore blu istituzionale (lo stesso del tuo header) */
 :root {
   --bf-blue: #0a285d; 
 }
 
 .intro-container {
-  max-width: 1140px; /* Larghezza standard per i container */
-  margin: 2rem auto 4rem auto; /* Spaziatura sopra e sotto */
+  max-width: 1140px;
+  margin: 2rem auto 4rem auto;
   padding: 0 1.5rem;
-  font-family: Arial, sans-serif; /* Scegli il font che preferisci */
+  font-family: Arial, sans-serif;
 }
 
 .intro-header {
@@ -15,11 +14,10 @@
   text-align: center;
 }
 
-/* --- Stili per i testi --- */
 .intro-header h3 {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #6c757d; /* Un grigio per il sottotitolo */
+  color: #6c757d;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -36,29 +34,26 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
-  max-width: 800px; /* Rende il testo più leggibile */
+  max-width: 800px;
 }
 
 .intro-footer {
   margin-top: 2.5rem;
 }
 
-/* --- Griglia delle Card --- */
 .card-grid {
   display: grid;
-  /* 1 colonna su mobile, 2 su tablet, 4 su desktop */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
 
-/* Stile base comune a tutte le card */
 .intro-card {
   border-radius: 12px;
   padding: 1.5rem;
   min-height: 280px;
   display: flex;
-  align-items: flex-end; /* Allinea il testo in basso */
+  align-items: flex-end; 
   margin: 0.5rem;
 }
 
@@ -68,16 +63,14 @@
   line-height: 1.4;
 }
 
-/* --- Stili per le card con Immagine --- */
 .card-with-bg {
-  position: relative; /* Necessario per l'overlay */
+  position: relative;
   background-size: cover;
   background-position: center;
   color: white;
-  overflow: hidden; /* Per l'overlay */
+  overflow: hidden; 
 }
 
-/* Questo crea l'ombra scura per rendere il testo leggibile */
 .card-with-bg::before {
   content: '';
   position: absolute;
@@ -85,22 +78,21 @@
   z-index: 1;
   background: linear-gradient(
     to top, 
-    rgba(0, 0, 0, 0.7) 0%,  /* Più scuro in basso */
-    rgba(0, 0, 0, 0.1) 60%, /* Sfumato verso l'alto */
+    rgba(0, 0, 0, 0.7) 0%, 
+    rgba(0, 0, 0, 0.1) 60%, 
     rgba(0, 0, 0, 0.0) 100%
   );
 }
 
 .card-with-bg h4 {
-  position: relative; /* Per stare sopra l'overlay */
+  position: relative;
   z-index: 2;
 }
 
-/* --- Stili per le card Semplici (blu) --- */
 .card-simple {
   background-color: var(--bf-blue);
   color: white;
-  align-items: center; /* Centra verticalmente il testo */
+  align-items: center; 
   text-align: center;
 }
 
@@ -112,10 +104,9 @@
   max-width: 1140px; 
   margin: 2rem auto 4rem auto; 
   padding: 0 1.5rem;
-  font-family: 'Open Sans', Arial, sans-serif; /* Scegli un font più moderno se vuoi */
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* --- Stili per i testi --- */
 .intro-header h3 {
   font-size: 0.9rem;
   font-weight: 600;
@@ -126,7 +117,7 @@
 }
 
 .intro-header h2 {
-  font-size: 2.8rem; /* leggermente più grande */
+  font-size: 2.8rem; 
   font-weight: 700;
   color: var(--bf-blue);
   margin-bottom: 1.5rem;
@@ -135,48 +126,44 @@
 .intro-header p,
 .intro-footer p {
   font-size: 1.1rem;
-  line-height: 1.7; /* leggermente più spazio tra le righe */
+  line-height: 1.7; 
   color: #333;
   max-width: 800px; 
-  margin: 0 auto; /* Centra il paragrafo */
+  margin: 0 auto; 
 }
 
 .intro-footer {
   margin-top: 2.5rem;
 }
 
-/* --- Wrapper per il carosello (per dare padding ai lati) --- */
 .card-carousel-wrapper {
   margin-top: 3rem;
-  padding: 0 0.5rem; /* Piccole imbottiture laterali se necessario */
+  padding: 0 0.5rem; 
 }
 
-/* Stile base comune a tutte le card */
 .intro-card {
   border-radius: 12px;
-  padding: 1.8rem; /* Aumentato il padding */
-  min-height: 300px; /* Aumentato l'altezza minima */
+  padding: 1.8rem;
+  min-height: 300px; 
   display: flex;
   align-items: flex-end; 
-  margin: 0.5rem; /* Margine tra le card nel carosello */
+  margin: 0.5rem;
 }
 
 .intro-card h4 {
-  font-size: 1.35rem; /* Testo più grande */
+  font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
-/* --- Stili per le card con Immagine (migliorato) --- */
 .card-with-bg {
   position: relative; 
   background-size: cover;
   background-position: center;
-  color: white; /* Testo bianco */
+  color: white; 
   overflow: hidden; 
 }
 
-/* Questo crea l'ombra scura, ora più intensa e con un gradiente più deciso */
 .card-with-bg::before {
   content: '';
   position: absolute;
@@ -184,8 +171,8 @@
   z-index: 1;
   background: linear-gradient(
     to top, 
-    rgba(0, 0, 0, 0.9) 0%,  /* Molto scuro in basso */
-    rgba(0, 0, 0, 0.5) 50%, /* Sfumatura più lunga */
+    rgba(0, 0, 0, 0.9) 0%,  
+    rgba(0, 0, 0, 0.5) 50%, 
     rgba(0, 0, 0, 0.1) 80%,
     rgba(0, 0, 0, 0.0) 100%
   );
@@ -196,22 +183,19 @@
   z-index: 2;
 }
 
-/* --- Stili per le card Semplici (blu) --- */
 .card-simple {
   background-color: var(--bf-blue);
   color: white;
   align-items: center; 
   text-align: center;
-  justify-content: center; /* Centra anche orizzontalmente */
+  justify-content: center; 
 }
 
-/* --- Stili per la navigazione del carosello --- */
-/* Personalizza i pallini (dots) */
 .owl-theme .owl-dots .owl-dot span {
     width: 10px;
     height: 10px;
     margin: 5px 7px;
-    background: #d6d6d6; /* Colore normale dei pallini */
+    background: #d6d6d6;
     display: block;
     backface-visibility: visible;
     -webkit-backface-visibility: visible;
@@ -220,10 +204,9 @@
 }
 .owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: var(--bf-blue); /* Colore attivo/hover */
+    background: var(--bf-blue); 
 }
 
-/* Se vuoi le frecce di navigazione (per ora nav: false nel TS) */
 .owl-theme .owl-nav button {
   position: absolute;
   top: 50%;

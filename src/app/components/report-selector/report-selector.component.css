@@ -1,15 +1,9 @@
-/* ===============================
-   Variabili e stili globali
-   =============================== */
 :root {
   --bf-blue: #0a285d;
   --fade-width: 60px;
   --fade-opacity: 0.9;
 }
 
-/* ===============================
-   Contenitore principale
-   =============================== */
 .year-scroll-wrapper {
   position: relative;
   overflow: hidden;
@@ -17,17 +11,11 @@
   max-width: 800px;
 }
 
-/* ===============================
-   Titolo
-   =============================== */
 h2 {
   font-weight: 600;
   color: var(--bf-blue);
 }
 
-/* ===============================
-   Barra degli anni
-   =============================== */
 .year-selector {
   display: flex;
   flex-direction: row;
@@ -44,9 +32,6 @@ h2 {
   cursor: grabbing;
 }
 
-/* ===============================
-   Pulsanti anno
-   =============================== */
 .year-selector button {
   background: transparent;
   border: 2px solid var(--bf-blue);
@@ -73,9 +58,6 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* ===============================
-   Ombre laterali (fade scroll)
-   =============================== */
 .year-fade {
   position: absolute;
   top: 0;
@@ -104,7 +86,6 @@ h2 {
   );
 }
 
-/* Nasconde le ombre quando si è a inizio/fine scroll */
 .year-scroll-wrapper.start .year-fade.left,
 .overflow-hidden.start .year-fade.left {
   opacity: 0;
@@ -115,9 +96,6 @@ h2 {
   opacity: 0;
 }
 
-/* ===============================
-   Card del report
-   =============================== */
 .report-card {
   text-align: center;
   margin: 2rem auto 0;
@@ -144,21 +122,14 @@ h2 {
   background-color: #0c3880;
 }
 
-/* ===============================
-   Fix opzionali
-   =============================== */
-
-/* ... (tutto il tuo CSS esistente) ... */
-
-/* Stile per il messaggio "non disponibile" */
 .report-not-available {
   margin-top: 1rem;
   padding: 1rem;
-  background-color: #f8f9fa; /* Un grigio chiaro */
-  border: 1px dashed #ced4da; /* Bordo tratteggiato */
+  background-color: #f8f9fa; 
+  border: 1px dashed #ced4da; 
   border-radius: 8px;
-  color: #6c757d; /* Testo grigio scuro */
-  max-width: 600px; /* Come la tua .report-card */
+  color: #6c757d; 
+  max-width: 600px; 
   margin-left: auto;
   margin-right: auto;
 }
@@ -168,14 +139,13 @@ h2 {
   font-weight: 500;
 }
 
-/* Ombre laterali morbide e dinamiche */
 .position-relative.overflow-hidden::before,
 .position-relative.overflow-hidden::after {
   content: '';
   position: absolute;
   top: 0;
   height: 100%;
-  width: 70px; /* leggermente più ampia per sfumare meglio */
+  width: 70px; 
   z-index: 4;
   pointer-events: none;
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -183,7 +153,6 @@ h2 {
   visibility: visible;
 }
 
-/* Ombra sinistra */
 .position-relative.overflow-hidden::before {
   left: 0;
   background: linear-gradient(
@@ -194,7 +163,6 @@ h2 {
   );
 }
 
-/* Ombra destra */
 .position-relative.overflow-hidden::after {
   right: 0;
   background: linear-gradient(
@@ -205,13 +173,11 @@ h2 {
   );
 }
 
-/* Quando siamo a inizio scroll */
 .position-relative.overflow-hidden.start::before {
   opacity: 0;
   visibility: hidden;
 }
 
-/* Quando siamo a fine scroll */
 .position-relative.overflow-hidden.end::after {
   opacity: 0;
   visibility: hidden;
