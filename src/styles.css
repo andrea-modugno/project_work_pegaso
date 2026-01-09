@@ -1,31 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --bf-green: #00522B;         /* Verde istituzionale */
-  --bf-blue: #0A285D;          /* Blu istituzionale */
-  --bf-blue-light: #123D7A;    /* Blu chiaro (hover) */
-  --bf-gray-bg: #F5F6F7;       /* Sfondo generale */
-  --bf-text: #2E2E2E;          /* Testo principale */
-  --bf-white: #FFFFFF;
+  --ferrari-text: #111111;          /* Testo principale */
+  --ferrari-white: #FFFFFF;
+  --ferrari-black: #222222;
+  --ferrari-gray: #9b9b9b;
+  --ferrari-gold: #998245;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Polin", sans-serif !important;
+}
+
+@font-face {
+  font-family: "Polin";
+  src: url("assets/fonts/polin/polin-regular.ttf");
+}
+@font-face {
+  font-family: "Polin-Black";
+  src: url("assets/fonts/polin/polin-black.ttf");
+}
+@font-face {
+  font-family: "Polin-Bold";
+  src: url("assets/fonts/polin/polin-bold.ttf");
+}
+@font-face {
+  font-family: "Polin-ExtraBold";
+  src: url("assets/fonts/polin/polin-extrabold.ttf");
+}
+@font-face {
+  font-family: "Polin-Light";
+  src: url("assets/fonts/polin/polin-light.ttf");
+}
+@font-face {
+  font-family: "Polin-ExtraLight";
+  src: url("assets/fonts/polin/polin-extralight.ttf");
 }
 
 body {
   font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--bf-gray-bg);
-  color: var(--bf-text);
+  color: var(--ferrari-text);
   line-height: 1.6;
   font-size: 16px;
 }
 
 header {
-  background-color: var(--bf-green);
-  color: var(--bf-white);
+  background-color: var(--ferrari-black);
+  color: var(--ferrari-gray);
   display: flex;
   align-items: center;
   padding: 12px 8%;
@@ -45,15 +69,15 @@ header h1 {
 .container {
   max-width: 1000px;
   margin: 50px auto;
-  background-color: var(--bf-white);
+  background-color: var(--ferrari-white);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .report-card {
-  background-color: var(--bf-white);
-  border-left: 5px solid var(--bf-blue);
+  background-color: var(--ferrari-white);
+  border-left: 5px solid var(--ferrari-gray);
   border-radius: 10px;
   padding: 20px 25px;
   margin-bottom: 20px;
@@ -66,26 +90,26 @@ header h1 {
 }
 
 a {
-  color: var(--bf-blue);
+  color: var(--ferrari-gray);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--bf-blue-light);
+  color: var(--ferrari-white);
   text-decoration: underline;
 }
 
 footer {
-  background-color: var(--bf-blue);
-  color: var(--bf-white);
+  background-color: var(--ferrari-black);
+  color: var(--ferrari-gray);
   text-align: center;
   padding: 25px 10px;
   font-size: 0.9rem;
 }
 
 footer a {
-  color: var(--bf-white);
+  color: var(--ferrari-gray);
   text-decoration: none;
   font-weight: 500;
 }
@@ -105,3 +129,6 @@ footer a:hover {
   }
 }
 
+body {
+  background-color: #f0f2f5b6;
+}

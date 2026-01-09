@@ -1,16 +1,21 @@
 <section class="intro-container">
 
   <div class="intro-header">
-    <h3>DAL GENOMA ALLO SCAFFALE</h3>
+    <h3>COLTIVARE L'ECCELLENZA</h3>
     <h2>Sostenibilità</h2>
     <p>
-      Il Gruppo BF propone un modello di sviluppo, scalabile e replicabile al servizio della filiera agro-industriale, orientato ai valori e ai principi di sostenibilità enunciati nel Codice etico, con un costante impegno nell’ambito della responsabilità sociale di impresa, che per le società del Gruppo significa orientamento permanente:
+      La sostenibilità fa parte da sempre del DNA di <span class="ferrari">Ferrari Trento</span>, è il suo modo di essere, fatto di <strong>rispetto verso le persone e verso la natura</strong>, in un percorso di innovazione continua volta ad offrire l’eccellenza all’interno di ogni bottiglia.
+
+Le sfide che <span class="ferrari">Ferrari</span> ha deciso di affrontare riguardano la ricerca di un <strong>equilibrio armonico tra uomo e natura</strong>: tutela dell’ambiente naturale, sano sviluppo umano e solida crescita economica sono gli asset su cui costruire il futuro.
+    </p>
+    <p>
+      <span class="ferrari">Ferrari Trento</span> conferma il suo impegno verso la promozione di pratiche e politiche sostenibili e aderisce, come Gruppo Lunelli, al Global Compact delle Nazioni Unite, un network che unisce governi, imprese, agenzie delle Nazioni Unite, organizzazioni sindacali e della società civile con l’obiettivo di <strong>promuovere un’economia globale sostenibile</strong>, rispettosa dei diritti umani e del lavoro, della salvaguardia dell’ambiente e della lotta alla corruzione.
     </p>
   </div>
 
   <div id="sustainabilityCarousel"  data-bs-ride="carousel" class="carousel slide">
     
-    <!-- 1. INDICATORI (i pallini sotto) -->
+    <!-- 1. INDICATORI -->
     <div class="carousel-indicators">
       <button 
         type="button"
@@ -23,23 +28,13 @@
       </button>
     </div>
 
-    <!-- 2. SLIDES (il contenuto) -->
+    <!-- 2. SLIDES -->
     <div class="carousel-inner">
-      
-      <!-- 
-        Usiamo *ngFor per creare una "carousel-item" per ogni card.
-        [class.active]="i === 0" è FONDAMENTALE: 
-        dice a Bootstrap quale slide mostrare per prima.
-      -->
       <div 
         class="carousel-item" 
         *ngFor="let card of introCards; let i = index"
         [class.active]="i === 0">
 
-        <!-- 
-          Ora, dentro la slide, ricreiamo le nostre card 
-          usando gli stili 'card-with-bg' e 'card-simple' che avevamo già.
-        -->
         <div *ngIf="card.type === 'image'" 
              class="intro-card card-with-bg" 
              [style.backgroundImage]="'url(' + card.imageUrl + ')'">
@@ -54,7 +49,7 @@
       </div>
     </div>
 
-    <!-- 3. CONTROLLI (le frecce) -->
+    <!-- 3. CONTROLLI -->
     <button class="carousel-control-prev" type="button" data-bs-target="#sustainabilityCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -67,7 +62,7 @@
 
   <div class="intro-footer">
     <p>
-Il Gruppo BF ha predisposto il suo primo Bilancio di Sostenibilità nell’esercizio 2018 avviando così, su base volontaria, un percorso di rendicontazione strutturata su identità, missione, valori e risultati raggiunti. Il Gruppo BF è convinto che, attraverso questo tipo di informativa, sia possibile rendicontare in modo puntuale e con rigore di metodo e far meglio conoscere i risultati e gli impatti sociali ed ambientali, oltre che economici, delle attività svolte dal Gruppo BF coerentemente con gli obiettivi individuati nel piano di sviluppo strategico.
+Con questo approccio <span class="ferrari">Ferrari</span> vuole contribuire in modo concreto agli <strong>Obiettivi di Sviluppo Sostenibile individuati dall’ONU (SDG)</strong>, e in particolare a quelli relativi a consumo e produzione responsabili, promozione e tutela della biodiversità, lotta al cambiamento climatico, salute e benessere, lavoro dignitoso e crescita economica, uguaglianza di genere, gestione sostenibile dell’acqua.
     </p>
   </div>
 

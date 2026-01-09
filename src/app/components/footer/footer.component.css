@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--bf-blue);
-  color: var(--bf-white);
+  background-color: var(--ferrari-black);
+  color: var(--ferrari-gray);
   padding: 40px 10%;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 }
 
 .footer a {
-  color: var(--bf-white);
+  color: var(--ferrari-gray);
 }
 
 .footer a:hover {

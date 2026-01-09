@@ -12,23 +12,18 @@ export class SustainabilityIntro implements OnInit {
 
   introCards = [
     {
-      title: 'Alla sostenibilità economica, in una logica di medio-lungo periodo',
-      imageUrl: '/assets/images/intro-valori.png',
+      title: '"Il Vino è la poesia della terra"',
+      imageUrl: '/assets/images/row-territorio-cantine-ferrari.jpg',
       type: 'image'
     },
     {
-      title: 'Al rispetto dell’ambiente e del paesaggio',
-      imageUrl: '/assets/images/intro-agricoltura.png',
+      title: 'Cultura della sostenibilità e rispetto per il territorio',
+      imageUrl: '/assets/images/ferrari-biologico.jpg',
       type: 'image'
     },
     {
-      title: 'Alla gestione oculata delle risorse, a beneficio della collettività e delle generazioni future',
-      imageUrl: '/assets/images/intro-foglia.png',
-      type: 'image'
-    },
-    {
-      title: 'All\'applicazione di sistemi all\'avanguardia nel campo della agricoltura di precisione, investendo in tecnologie avanzate',
-      imageUrl: '/assets/images/intro-drone.png',
+      title: 'Coltivare il talento',
+      imageUrl: '/assets/images/vigne_2.jpg',
       type: 'image'
     }
   ];
